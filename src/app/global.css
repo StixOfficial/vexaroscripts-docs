@@ -10,3 +10,36 @@ html > body[data-scroll-locked] {
   margin-right: 0px !important;
   --removed-body-scroll-bar-size: 0px !important;
 }
+
+/* Vexaro Dark Theme */
+:root {
+  --color-fd-background: #050505;
+  --color-fd-foreground: #f5f5f5;
+  --color-fd-muted: #101010;
+  --color-fd-muted-foreground: #a1a1a1;
+  --color-fd-card: #0b0b0b;
+  --color-fd-card-foreground: #f5f5f5;
+  --color-fd-popover: #0b0b0b;
+  --color-fd-popover-foreground: #f5f5f5;
+  --color-fd-border: #242424;
+  --color-fd-primary: #9b111e;
+  --color-fd-primary-foreground: #ffffff;
+  --color-fd-accent: #16090b;
+  --color-fd-accent-foreground: #ffffff;
+}
+
+.dark {
+  --color-fd-background: #050505;
+  --color-fd-foreground: #f5f5f5;
+  --color-fd-muted: #101010;
+  --color-fd-muted-foreground: #a1a1a1;
+  --color-fd-card: #0b0b0b;
+  --color-fd-card-foreground: #f5f5f5;
+  --color-fd-popover: #0b0b0b;
+  --color-fd-popover-foreground: #f5f5f5;
+  --color-fd-border: #242424;
+  --color-fd-primary: #b51224;
+  --color-fd-primary-foreground: #ffffff;
+  --color-fd-accent: #1b090c;
+  --color-fd-accent-foreground: #ffffff;
+}

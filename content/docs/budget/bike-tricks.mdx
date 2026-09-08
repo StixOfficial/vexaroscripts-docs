@@ -1,0 +1,332 @@
+---
+title: Bike Tricks
+description: Vexaro Bike Tricks documentation and configuration guide.
+---
+
+# Bike Tricks
+
+Vexaro Bike Tricks adds stunt tricks and movement controls to bicycles and motorbikes.
+
+## Installation
+
+Place the `vexaro_biketricks` folder inside your server's `resources` directory.
+
+Then add the following to your `server.cfg`:
+
+```text
+ensure vexaro_biketricks
+```
+
+Restart your server after adding the resource.
+
+## What Is What
+
+The configuration controls which vehicles can use the tricks, what keys are used, how fast air tricks rotate, bunny hop power, and automatic levelling.
+
+### Full Configuration
+
+```lua
+Vexaro = {}
+
+Vexaro.Config = {
+
+    modifierKey = 'LEFTCTRL',
+
+    minSpeed = 10.0,
+
+    allowBicycles   = true,
+    allowMotorbikes = true,
+
+    defaultKeys = {
+
+        -- Ground poses
+        superman   = 'UP',
+        layback    = 'DOWN',
+        onehander  = 'LEFT',
+        nohander   = 'RIGHT',
+
+        -- Air tricks
+        backflip   = 'X',
+        frontflip  = 'Q',
+        rollleft   = 'I',
+        rollright  = 'L',
+        spinleft   = 'Z',
+        spinright  = 'B',
+
+        -- Bunny hop
+        bunnyhop   = 'SPACE',
+    },
+
+    airTrickSpeed = 6.0,
+
+    bunnyHopPower = 12.0,
+
+    autoLevel = true,
+}
+```
+
+## modifierKey
+
+```lua
+modifierKey = 'LEFTCTRL'
+```
+
+This controls the modifier key used by Bike Tricks.
+
+The default key is `LEFTCTRL`.
+
+You can change it to another key if required.
+
+Example:
+
+```lua
+modifierKey = 'LEFTSHIFT'
+```
+
+## minSpeed
+
+```lua
+minSpeed = 10.0
+```
+
+This controls the minimum speed required for the floor tick.
+
+A higher value means the player needs to be travelling faster.
+
+A lower value allows the action at a slower speed.
+
+## allowBicycles
+
+```lua
+allowBicycles = true
+```
+
+Controls whether bicycles can use Bike Tricks.
+
+`true` means bicycles are enabled.
+
+`false` means bicycles are disabled.
+
+Example:
+
+```lua
+allowBicycles = false
+```
+
+## allowMotorbikes
+
+```lua
+allowMotorbikes = true
+```
+
+Controls whether motorbikes can use Bike Tricks.
+
+`true` means motorbikes are enabled.
+
+`false` means motorbikes are disabled.
+
+Example:
+
+```lua
+allowMotorbikes = false
+```
+
+# Default Keys
+
+The `defaultKeys` section controls the keybinds for each trick.
+
+You can change these keys to whatever you prefer.
+
+## Ground Poses
+
+### Superman
+
+```lua
+superman = 'UP'
+```
+
+Default key: `UP`
+
+Performs the Superman pose.
+
+### Layback
+
+```lua
+layback = 'DOWN'
+```
+
+Default key: `DOWN`
+
+Performs the Layback pose.
+
+### One Hander
+
+```lua
+onehander = 'LEFT'
+```
+
+Default key: `LEFT`
+
+Performs the One Hander pose.
+
+### No Hander
+
+```lua
+nohander = 'RIGHT'
+```
+
+Default key: `RIGHT`
+
+Performs the No Hander pose.
+
+# Air Tricks
+
+## Backflip
+
+```lua
+backflip = 'X'
+```
+
+Default key: `X`
+
+Performs a backflip while airborne.
+
+## Frontflip
+
+```lua
+frontflip = 'Q'
+```
+
+Default key: `Q`
+
+Performs a frontflip while airborne.
+
+## Roll Left
+
+```lua
+rollleft = 'I'
+```
+
+Default key: `I`
+
+Performs a roll to the left while airborne.
+
+## Roll Right
+
+```lua
+rollright = 'L'
+```
+
+Default key: `L`
+
+Performs a roll to the right while airborne.
+
+## Spin Left
+
+```lua
+spinleft = 'Z'
+```
+
+Default key: `Z`
+
+Performs a spin to the left while airborne.
+
+## Spin Right
+
+```lua
+spinright = 'B'
+```
+
+Default key: `B`
+
+Performs a spin to the right while airborne.
+
+# Bunny Hop
+
+## bunnyhop
+
+```lua
+bunnyhop = 'SPACE'
+```
+
+Default key: `SPACE`
+
+Controls the key used to perform the bunny hop.
+
+Example:
+
+```lua
+bunnyhop = 'G'
+```
+
+# Air Trick Speed
+
+```lua
+airTrickSpeed = 6.0
+```
+
+Controls how quickly the bike rotates during air tricks.
+
+Higher values make the rotations faster.
+
+Lower values make the rotations slower.
+
+Example:
+
+```lua
+airTrickSpeed = 4.0
+```
+
+# Bunny Hop Power
+
+```lua
+bunnyHopPower = 12.0
+```
+
+Controls the power of the bunny hop.
+
+Higher values make the bunny hop stronger.
+
+Lower values make the bunny hop weaker.
+
+Example:
+
+```lua
+bunnyHopPower = 16.0
+```
+
+# Automatic Levelling
+
+```lua
+autoLevel = true
+```
+
+Controls automatic bike levelling.
+
+`true` means automatic levelling is enabled.
+
+`false` means automatic levelling is disabled.
+
+Example:
+
+```lua
+autoLevel = false
+```
+
+# Changing Controls
+
+To change a trick's key, edit the value inside `defaultKeys`.
+
+For example, to change the backflip from `X` to `E`:
+
+```lua
+backflip = 'E'
+```
+
+To change the bunny hop from `SPACE` to `G`:
+
+```lua
+bunnyhop = 'G'
+```
+
+Save the configuration and restart the resource after making changes.
