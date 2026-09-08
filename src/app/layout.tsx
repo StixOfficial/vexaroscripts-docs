@@ -18,6 +18,11 @@ export default function Layout({ children }: LayoutProps<'/'>) {
           theme={{
             enabled: false,
           }}
+          search={{
+            options: {
+              type: 'static',
+            },
+          }}
         >
           {children}
         </RootProvider>
